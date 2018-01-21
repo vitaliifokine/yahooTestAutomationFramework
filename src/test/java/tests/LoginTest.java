@@ -1,20 +1,10 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.domain.User;
 
-public class LoginTest {
-
-    @BeforeClass
-    public void setUp() {
-        ChromeDriverManager.getInstance().setup();
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "https://www.yahoo.com/";
-    }
+public class LoginTest extends BaseTest {
 
     @Test
     public void testCanLoginAsValidUser() {
